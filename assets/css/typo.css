@@ -7,6 +7,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-rendering: optimizelegibility;
+  
 }
 
 /* 如果你的项目仅支持 IE9+ | Chrome | Firefox 等，推荐在 <html> 中添加 .borderbox 这个 class */
@@ -298,11 +299,11 @@ h1, h2, h3, h4, h5, h6 {
 .typo table th, .typo table td, .typo-table th, .typo-table td, .typo table caption {
   border: 1px solid #ddd;
   padding: 0.5em 1em;
-  color: #666;
+  color:#666;
 }
 
 .typo table th, .typo-table th {
-  background: #fbfbfb;
+  background: #708D9B;
 }
 
 .typo table thead th, .typo-table thead th {
@@ -320,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .typo-em, .typo em, legend, caption {
-  color: #000;
+  color: #FA8072;
   font-weight: inherit;
 }
 
