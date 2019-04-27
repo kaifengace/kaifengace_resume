@@ -4,4 +4,5 @@
 "sources": ["../sass/components/_global.scss","../sass/components/_header.scss","../sass/components/_container.scss","../sass/components/_footer.scss","../sass/components/_custom.scss"],
 "names": [],
 "file": "index.css"
+
 }
