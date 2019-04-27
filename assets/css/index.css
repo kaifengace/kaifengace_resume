@@ -1,9 +1,6 @@
 @charset "UTF-8";
-/* -------------------------------------------------
- * 公共部分
- * ------------------------------------------------- */
 body {
-  background: #e5e5e5 url(../../assets/images/background.png);
+  background-size: cover;
   width: 100%;
   overflow-x: hidden;
   padding: 1rem 10%;
@@ -17,21 +14,29 @@ body {
     body .info-unit h2 {
       font-weight: 700; }
     body .info-unit h3 {
-      font-weight: 300; }
-
-/* -------------------------------------------------
- * 头部部分
- * ------------------------------------------------- */
+      font-weight: 400; }
+     
+div{
+				height: 200px;
+				width: 600px;
+			}
+			#diva{display: flex;}
+			     #diva{flex-flow: column wrap;}
+			     #diva{justify-content: space-between;}
+@media only screen and (max-width:400px ) {
+	#diva{flex-wrap: nowrap;}
+	#diva{flex-basis: 100%;}
+	div{height:100%}
+}
+      
 .header {
   display: none; }
 
-/* -------------------------------------------------
- * 主体部分
- * ------------------------------------------------- */
+
 .container .side {
   position: absolute;
-  width: 20rem;
-  background: #fff;
+  width: 23rem;
+  background: #EAEAEA;
   border-radius: 5px;
   box-shadow: 0 5px 20px #bbb;
   box-sizing: border-box;
@@ -46,51 +51,13 @@ body {
       height: 8rem;
       overflow: hidden;
       position: relative; }
-      .container .side .me .portrait .loading {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 8rem;
-        height: 4rem;
-        margin: 0 auto; }
-      .container .side .me .portrait .loading span {
-        display: inline-block;
-        width: 8px;
-        height: 100%;
-        border-radius: 4px;
-        background: lightgreen;
-        -webkit-animation: load 1s ease infinite; }
-@-webkit-keyframes load {
-  0%,100% {
-    height: 3rem;
-    margin: .5rem 0;
-    background: lightblue; }
-  50% {
-    height: 1rem;
-    margin: 1.5rem 0;
-    background: lightgreen; } }
-@keyframes {
-  0%,100% {
-    height: 3rem;
-    margin: .5rem 0;
-    background: lightblue; }
-  50% {
-    height: 1rem;
-    margin: 1.5rem 0;
-    background: lightgreen; } }
-      .container .side .me .portrait .loading span:nth-child(2) {
-        -webkit-animation-delay: 0.2s; }
-      .container .side .me .portrait .loading span:nth-child(3) {
-        -webkit-animation-delay: 0.4s; }
-      .container .side .me .portrait .loading span:nth-child(4) {
-        -webkit-animation-delay: 0.6s; }
-      .container .side .me .portrait .loading span:nth-child(5) {
-        -webkit-animation-delay: 0.8s; }
+      
+        
       .container .side .me .portrait img {
-        display: none;
+        display: inline;
         width: 8rem;
         height: 8rem;
-        border-radius: 50%; }
+        border-radius: 50%; }       
   .container .side .info-unit ul li label {
     display: inline-block;
     width: 35%; }
@@ -98,28 +65,24 @@ body {
     display: inline-block;
     vertical-align: top;
     width: 60%; }
+
+  
 .container .main {
   position: relative;
-  margin-left: 22rem;
-  background: #fff;
+  margin-left: 25rem;
+  background:#EAEAEA;
   border-radius: 5px;
   box-shadow: 0 5px 20px #bbb;
   box-sizing: border-box;
   padding: 1rem; }
-  .container .main .info-unit ul {
-    box-sizing: border-box;
+ .container .main .info-unit ul {
+  	box-sizing: border-box;
     padding-left: 1.2rem;
     padding-right: 0.8rem; }
     .container .main .info-unit ul li {
-      margin-bottom: 1rem;
+    	margin-bottom: 1rem;
       list-style: disc; }
-      .container .main .info-unit ul li h3 .link {
-        font-size: .5rem;
-        border: 1px solid #4db6ac;
-        padding: 1px 3px;
-        -webkit-border-radius: 5px;
-        border-radius: 5px;
-        margin-left: .5rem; }
+      
       .container .main .info-unit ul li h3 time {
         text-align: right;
         float: right; }
@@ -128,24 +91,8 @@ body {
         margin: 0; }
       .container .main .info-unit ul li .info-content .fa {
         font-size: 1em; }
-
-/* -------------------------------------------------
- * 文档底部
- * ------------------------------------------------- */
-.footer {
-  width: 100%;
-  margin-top: 1rem;
-  height: 2rem; }
-  .footer p {
-    line-height: 2rem;
-    text-align: center;
-    font-size: 0.8rem; }
-
-/* -------------------------------------------------
- * 自定义部分
- * ------------------------------------------------- */
 .fa {
-  font-size: 1.2em; }
+  font-size:1.2em; }
 
 h2 {
   font-size: 1.2em; }
@@ -155,7 +102,27 @@ h3 {
 
 hr {
   margin-bottom: .4em; }
+progress {
+  background-color: #f6f6f6;
+  display: inline;
+  /*width: 195px;*/
+  height: 1em; }
 
+progress::-webkit-progress-bar {
+  background-color: #FFF }
+
+progress::-webkit-progress-value {
+  background-color:#FA8072; }
+
+progress::-moz-progress-bar {
+  background-color: #e0eaf0; }
+
+progress::-moz-progress-value {
+  background-color: #708d9b; }
+
+.progress-list {
+  line-height: 2; }
+  
 aside {
   position: fixed;
   right: 0;
@@ -175,30 +142,15 @@ aside {
       line-height: 38px;
       padding-left: 10px;
       color: #fff; }
-
-progress {
-  background-color: #f6f6f6;
-  display: inline;
-  /*width: 195px;*/
-  height: 1em; }
-
-progress::-webkit-progress-bar {
-  background-color: #e0eaf0; }
-
-progress::-webkit-progress-value {
-  background-color: #1abc9c; }
-
-progress::-moz-progress-bar {
-  background-color: #e0eaf0; }
-
-progress::-moz-progress-value {
-  background-color: #708d9b; }
-
-.progress-list {
-  line-height: 2; }
-
-mark {
-  background: rgba(232, 232, 232, 0.8); }
+     
+.footer {
+  width: 100%;
+  margin-top: 1rem;
+  height: 2rem; }
+  .footer p {
+    line-height: 2rem;
+    text-align: center;
+    font-size: 0.8rem; }
 
 @media screen and (max-width: 1169px) {
   .container .info-unit h3 span {
@@ -248,5 +200,8 @@ mark {
 
   aside {
     display: none; } }
+    
 
-/*# sourceMappingURL=index.css.map */
+
+
+
